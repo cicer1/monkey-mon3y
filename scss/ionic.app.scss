@@ -22,7 +22,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 
-.login{
+.login {
 
   .background.scroll-content {
       background: url('../img/login.png') no-repeat;
@@ -62,3 +62,19 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 }
 
+.accounts {
+
+  .background.scroll-content {
+    background: url('../img/overview.png') no-repeat;
+    background-size: cover;
+  }
+  .accounts-list {
+    .accounts-list-item{
+      background: url('../img/card.png') no-repeat;
+      background-size: cover;
+      height: 220px;
+      margin-bottom: 20px;
+    }
+  }
+
+}
