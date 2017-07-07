@@ -24,16 +24,14 @@ angular.module('app.controllers', [])
   .controller('accountsCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, DataService) {
       $scope.accounts = DataService.getAccounts();
-
       console.log('ACCOUNTS:', $scope.accounts);
     }
   ])
 
   .controller('transactionCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, DataService) {
-
       var populateTransactions = function () {
-        return DataService.getTransactionsByAccount(1).$loaded().then(function (response) {
+        return DataService.getTransactionsByAccount(parseInt($stateParams.accountId)).$loaded().then(function (response) {
           $scope.transactions = response;
           angular.forEach($scope.transactions, function (transaction) {
             transaction.shopData = DataService.getShopsById(transaction.shop);

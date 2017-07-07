@@ -23,6 +23,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "vars";
 @import "list";
 
+* {
+  font-family: $font;
+}
+
 .login {
 
   .background.scroll-content {
