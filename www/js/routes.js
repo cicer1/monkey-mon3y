@@ -31,7 +31,10 @@ angular.module('app.routes', [])
       })
 
       .state('settings', {
-        url: '/settings',
+        url: '/settings/:accountId',
+        params: {
+          accountId: null,
+        },
         templateUrl: 'templates/settings.html',
         controller: 'settingsCtrl'
       })

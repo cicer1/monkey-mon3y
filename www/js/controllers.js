@@ -30,8 +30,9 @@ angular.module('app.controllers', [])
 
   .controller('transactionCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, DataService) {
+      $scope.accountId = $stateParams.accountId;      
       var populateTransactions = function () {
-        return DataService.getTransactionsByAccount(parseInt($stateParams.accountId)).$loaded().then(function (response) {
+        return DataService.getTransactionsByAccount(parseInt($scope.accountId)).$loaded().then(function (response) {
           $scope.transactions = response;
           angular.forEach($scope.transactions, function (transaction) {
             transaction.shopData = DataService.getShopsById(transaction.shop);
@@ -53,7 +54,7 @@ angular.module('app.controllers', [])
     function ($scope, $stateParams, DataService) {
       $scope.shops = DataService.getShops();
 
-      $scope.account = DataService.getAccountsById(1);
+      $scope.account = DataService.getAccountsById($stateParams.accountId);
 
       $scope.changeAllowance = function (obj) {
         var update = {};
