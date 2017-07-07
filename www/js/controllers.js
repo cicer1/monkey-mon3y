@@ -6,10 +6,11 @@ angular.module('app.controllers', [])
     function ($scope, $stateParams, $location) {
 
       var PIN_LENGTH = 4;
-      $scope.loginKey = {value: 1};
+      $scope.loginKey = { value: 1 };
 
-      $scope.loginKeyChanged = function() {
-        if ($scope.loginKey.value.toString().length === PIN_LENGTH+1) {
+      $scope.loginKeyChanged = function () {
+        console.log($scope.loginKey)
+        if ($scope.loginKey.value.toString().length === PIN_LENGTH + 1) {
           $location.path('accounts');
           $scope.loginKey.value = 1;
         }

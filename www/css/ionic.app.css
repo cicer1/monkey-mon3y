@@ -9814,3 +9814,33 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.login .background.scroll-content {
+  background: url("../img/login.png") no-repeat;
+  background-size: cover; }
+
+.login .login-key {
+  background-color: transparent;
+  border: 0; }
+  .login .login-key input {
+    color: transparent; }
+
+.login .container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .login .container .four-key {
+    height: 80px;
+    display: flex;
+    justify-content: center; }
+    .login .container .four-key .banana {
+      width: 80px;
+      height: 80px;
+      background: url("../img/pinEmpty.png") no-repeat;
+      background-size: cover; }
+      .login .container .four-key .banana.selected {
+        background: url("../img/pinFull.png") no-repeat;
+        background-size: cover; }
