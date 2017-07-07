@@ -1,19 +1,11 @@
-<ion-view title="Login" id="page4">
-  <ion-content padding="true" class="has-header">
+<ion-view hide-nav-bar="true" id="page4">
+  <ion-content >
     <form id="login-form1" class="list">
       <ion-list id="login-list1">
-        <label class="item item-input" id="login-input1">
-          <span class="input-label">Email</span>
-          <input type="email" placeholder="">
-        </label>
         <label class="item item-input" id="login-input2">
-          <span class="input-label">Password</span>
-          <input type="password" placeholder="">
+          <input type="number" placeholder="" autofocus ng-model="loginKey.value" ng-change="loginKeyChanged()">
         </label>
       </ion-list>
-      <div class="spacer" style="height: 40px;"></div>
-      <button id="login-button1" class="button button-stable button-block">Log in</button>
-      <a href-inappbrowser="/signup" id="login-button2" class="button button-positive button-block button-clear">Or create an account</a>
     </form>
   </ion-content>
 </ion-view>
