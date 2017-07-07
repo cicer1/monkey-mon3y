@@ -9845,6 +9845,13 @@ a.button {
         background: url("../img/pinFull.png") no-repeat;
         background-size: cover; }
 
+.bar.bar-stable {
+  background: transparent; }
+
+.background.banana-clean {
+  background: url("../img/banana-clean.png") no-repeat;
+  background-size: cover; }
+
 .accounts .background.scroll-content {
   background: url("../img/overview.png") no-repeat;
   background-size: cover; }
@@ -9859,4 +9866,8 @@ a.button {
   justify-content: center;
   padding-left: 50%; }
   .accounts .accounts-list .accounts-list-item .account-name {
-    color: #472406; }
+    color: #472406;
+    font-size: 22px; }
+  .accounts .accounts-list .accounts-list-item .account-balance {
+    color: #FEC43B;
+    font-size: 20px; }

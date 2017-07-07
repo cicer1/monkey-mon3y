@@ -20,7 +20,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
+@import "vars";
+@import "list";
 
 .login {
 
@@ -62,8 +63,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 }
 
-.accounts {
+.bar.bar-stable {
+  background: transparent;
+}
 
+.background.banana-clean {
+  background: url('../img/banana-clean.png') no-repeat;
+  background-size: cover;
+}
+
+.accounts {
   .background.scroll-content {
     background: url('../img/overview.png') no-repeat;
     background-size: cover;
