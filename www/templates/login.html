@@ -1,19 +1,19 @@
-<ion-view title="Login" id="page4">
-  <ion-content padding="true" class="has-header">
+<ion-view hide-nav-bar="true" id="page4" class="login">
+  <ion-content class="background" scroll="false">
     <form id="login-form1" class="list">
       <ion-list id="login-list1">
-        <label class="item item-input" id="login-input1">
-          <span class="input-label">Email</span>
-          <input type="email" placeholder="">
-        </label>
-        <label class="item item-input" id="login-input2">
-          <span class="input-label">Password</span>
-          <input type="password" placeholder="">
+        <label class="item item-input login-key" id="login-input2">
+          <input type="number" placeholder="" autofocus ng-model="loginKey.value" ng-change="loginKeyChanged()">
         </label>
       </ion-list>
-      <div class="spacer" style="height: 40px;"></div>
-      <button id="login-button1" class="button button-stable button-block">Log in</button>
-      <a href-inappbrowser="/signup" id="login-button2" class="button button-positive button-block button-clear">Or create an account</a>
     </form>
+    <div class="container">
+      <div class="four-key">
+        <span class="banana" ng-class="{'selected': loginKey.value.toString().length >= 2}"></span>
+        <span class="banana" ng-class="{'selected': loginKey.value.toString().length >= 3}"></span>
+        <span class="banana" ng-class="{'selected': loginKey.value.toString().length >= 4}"></span>
+        <span class="banana" ng-class="{'selected': loginKey.value.toString().length >= 5}"></span>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
