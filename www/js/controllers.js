@@ -14,31 +14,36 @@ angular.module('app.controllers', [])
     }
   ])
 
-  .controller('accountsCtrl', ['$scope', '$stateParams', '$firebaseArray',
+  .controller('accountsCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, $firebaseArray) {
       // create a reference to our Firebase database
-      var ref = firebase.database().ref().child("accounts");
-      $scope.accounts = $firebaseArray(ref);
-      console.log('ACCOUNTS:', $scope.accounts);
+      // var ref = firebase.database().ref().child("accounts");
+      // $scope.accounts = $firebaseArray(ref);
+      // console.log('ACCOUNTS:', $scope.accounts);
     }
   ])
 
-  .controller('transactionCtrl', ['$scope', '$stateParams', '$firebaseArray',
-    function ($scope, $stateParams, $firebaseArray) {
+  .controller('transactionCtrl', ['$scope', '$stateParams', 'DataService',
+    function ($scope, $stateParams, DataService) {
       // create a reference to our Firebase database
-      var ref = firebase.database().ref().child("transactions");
-      $scope.transactions = $firebaseArray(ref);
+      // var ref = firebase.database().ref().child("transactions");
+      // $scope.transactions = $firebaseArray(ref);
+      // console.log('TRANSACTIONS:', $scope.transactions);
+
+      $scope.transactions = DataService.getTransactionsBtAccount(1);
+      $scope.shop = DataService.getShopsById(1);
+
       console.log('TRANSACTIONS:', $scope.transactions);
-
+      console.log('SHOP:', $scope.shop);
     }
   ])
 
-  .controller('settingsCtrl', ['$scope', '$stateParams', '$firebaseArray',
+  .controller('settingsCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, $firebaseArray) {
       // create a reference to our Firebase database
-      var ref = firebase.database().ref().child("shops");
-      $scope.shops = $firebaseArray(ref);
-      console.log('SHOPS:', $scope.shops);
+      // var ref = firebase.database().ref().child("shops");
+      // $scope.shops = $firebaseArray(ref);
+      // console.log('SHOPS:', $scope.shops);
 
     }
   ])
