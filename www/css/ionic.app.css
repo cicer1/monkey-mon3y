@@ -9845,12 +9845,44 @@ a.button {
         background: url("../img/pinFull.png") no-repeat;
         background-size: cover; }
 
+.bar.bar-stable {
+  background: transparent; }
+
+.background.banana-clean {
+  background: url("../img/banana-clean.png") no-repeat;
+  background-size: cover; }
+
 .accounts .background.scroll-content {
   background: url("../img/overview.png") no-repeat;
   background-size: cover; }
 
-.accounts .accounts-list .accounts-list-item {
+.accounts .accounts-mainusername {
+  padding-top: 120px;
+  text-align: center;
+  color: #472406;
+  font-size: 50px;
+  margin-bottom: 15px; }
+
+.accounts .linked-account {
+  text-align: center;
+  color: #472406;
+  font-size: 30px; }
+
+.accounts-list-item {
   background: url("../img/card.png") no-repeat;
-  background-size: cover;
-  height: 220px;
-  margin-bottom: 20px; }
+  background-position: center top;
+  background-size: 100% auto;
+  height: 45vw;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50%; }
+  .accounts-list-item .account-name {
+    color: #472406;
+    font-size: 40px;
+    margin-bottom: 40px; }
+  .accounts-list-item .account-balance {
+    color: #AAAAAA;
+    font-size: 30px;
+    font-size: 20px; }
