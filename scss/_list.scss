@@ -1,40 +1,47 @@
 .monkey-list {
   .monkey-list-item {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    align-items: flex-start;
-    background: white;
-    border-bottom: 1px solid $banana-yellow;
-    margin: 0 -10px;
-    padding: 20px;
-    min-height: 90px;
+    align-items    : flex-start;
+    background     : white;
+    border-bottom  : 1px solid $banana-yellow;
+    margin         : 0 -10px;
+    padding        : 20px;
+    min-height     : 90px;
+
     img {
-      width: 15vw;
+      width : 15vw;
       margin: -5px 10px 0 -5px;
     }
+
     .item-data {
       flex: 1;
     }
+
     .item-name {
-      font-size: 22px;
+      font-size  : 22px;
       line-height: 1.2em;
       font-weight: 900;
     }
+
     .item-text {
-      font-size: 19px;
+      font-size  : 19px;
       font-weight: 400;
     }
-    .item-amount {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #8c8c8c;
-      font-size: 28px;
-      margin-top: 10px;
-      font-weight: 700;
-    }
-    ion-toggle {
 
+    .item-amount {
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      color          : #8c8c8c;
+      font-size      : 28px;
+      margin-top     : 10px;
+      font-weight    : 700;
+    }
+
+    .item-toggle {
+      padding: 24px 31px;
+      border : 0;
     }
   }
 }

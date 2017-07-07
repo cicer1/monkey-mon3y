@@ -9844,6 +9844,9 @@ a.button {
     font-size: 28px;
     margin-top: 10px;
     font-weight: 700; }
+  .monkey-list .monkey-list-item .item-toggle {
+    padding: 24px 31px;
+    border: 0; }
 
 * {
   font-family: "Skia"; }
@@ -9926,3 +9929,13 @@ a.button {
     color: #AAAAAA;
     font-size: 30px;
     font-weight: 400; }
+
+.separator-header {
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  margin: -1px -10px 0;
+  padding: 10px 10px 7px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #777;
+  font-size: 12px; }
