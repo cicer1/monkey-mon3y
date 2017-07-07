@@ -44,10 +44,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    img {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto;
+    }
     .four-key {
       height: 80px;
       display: flex;
       justify-content: center;
+      margin-top: 10px;
       .banana {
         width: 80px;
         height: 80px;
