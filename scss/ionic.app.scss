@@ -69,11 +69,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     background-size: cover;
   }
   .accounts-list {
-    .accounts-list-item{
+    .accounts-list-item {
       background: url('../img/card.png') no-repeat;
       background-size: cover;
-      height: 220px;
+      height: 45vh;
       margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 50%;
+      .account-name {
+        color: $jungle-brown;
+        font-size: 22px;
+      }
+      .account-balance {
+        color: $banana-yellow;
+        font-size: 20px;
+      }
     }
   }
 
