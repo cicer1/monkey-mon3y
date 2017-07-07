@@ -39,7 +39,7 @@ angular.module('app', [
         cordova.plugins.Keyboard.disableScroll(true);
         window.setTimeout(function () {
           cordova.plugins.Keyboard.show();
-        }, 3300);
+        }, 3000);
       }
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required

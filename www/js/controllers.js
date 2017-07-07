@@ -1,9 +1,9 @@
 angular.module('app.controllers', [])
 
-  .controller('loginCtrl', ['$scope', '$stateParams', '$location', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+  .controller('loginCtrl', ['$scope', '$stateParams', '$ionicHistory', '$state',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
     // You can include any angular dependencies as parameters for this function
     // TIP: Access Route Parameters for your page via $stateParams.parameterName
-    function ($scope, $stateParams, $location) {
+    function ($scope, $stateParams, $ionicHistory, $state) {
 
       var PIN_LENGTH = 4;
       $scope.loginKey = {
@@ -13,8 +13,14 @@ angular.module('app.controllers', [])
       $scope.loginKeyChanged = function () {
         console.log($scope.loginKey)
         if ($scope.loginKey.value.toString().length === PIN_LENGTH + 1) {
-          $location.path('accounts');
           $scope.loginKey.value = 1;
+
+          $ionicHistory.nextViewOptions({
+              disableBack: true
+          });
+          $state.go('accounts');
+
+
         }
       }
     }
@@ -30,7 +36,7 @@ angular.module('app.controllers', [])
 
   .controller('transactionCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, DataService) {
-      $scope.accountId = $stateParams.accountId;      
+      $scope.accountId = $stateParams.accountId;
       var populateTransactions = function () {
         return DataService.getTransactionsByAccount(parseInt($scope.accountId)).$loaded().then(function (response) {
           $scope.transactions = response;
