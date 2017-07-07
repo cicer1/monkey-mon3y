@@ -8,10 +8,12 @@
       <li class="monkey-list-item" ng-repeat="transaction in transactions">
         <img src="" alt="">
         <div class="item-data">
-          <span class="item-name"></span>
-          <span class="item-date"></span>
+          <span class="item-name">{{ transaction.shopData.name }}</span>
+          <span class="item-text">{{ transaction.date }}</span>
         </div>
-        <div class="item-amount"></div>
+        <div class="item-amount">
+          {{ transaction.amount }}
+        </div>
       </li>
     </ul>
 

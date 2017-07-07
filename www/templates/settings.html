@@ -1,15 +1,28 @@
 <ion-view title="Settings" id="page8">
   <ion-content padding="true" class="has-header">
-    <ion-list id="settings-list6">
-      <ion-item class="item-thumbnail-left" id="settings-list-item28">
-        <h2>Item</h2>
-      </ion-item>
-      <ion-item class="item-thumbnail-left" id="settings-list-item31">
-        <h2>Item</h2>
-      </ion-item>
-      <ion-item class="item-thumbnail-left" id="settings-list-item30">
-        <h2>Item</h2>
-      </ion-item>
-    </ion-list>
+    <!-- Account -->
+    <ul class="monkey-list">
+      <li>
+        <img src="" alt="">
+        <div class="item-data">
+          <div class="item-name"></div>
+          <div class="item-text"></div>
+        </div>
+        <ion-toggle></ion-toggle>
+      </li>
+    </ul>
+
+    <!-- Shops -->
+    <h4 class="separator-header"></h4>
+    <ul class="monkey-list">
+      <li ng-repeat="shop in shops">
+        <img src="" alt="">
+        <div class="item-data">
+          <div class="item-name">{{ shop.name }}</div>
+          <div class="item-text">{{ shop.distance }}</div>
+        </div>
+        <ion-toggle ng-model="shop.allowed" ng-change="changeAllowance(shop)"></ion-toggle>
+      </li>
+    </ul>
   </ion-content>
 </ion-view>

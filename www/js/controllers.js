@@ -15,7 +15,7 @@ angular.module('app.controllers', [])
   ])
 
   .controller('accountsCtrl', ['$scope', '$stateParams', 'DataService',
-    function ($scope, $stateParams, $firebaseArray) {
+    function ($scope, $stateParams, DataService) {
       $scope.accounts = DataService.getAccounts();
 
       console.log('ACCOUNTS:', $scope.accounts);
@@ -24,17 +24,38 @@ angular.module('app.controllers', [])
 
   .controller('transactionCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, DataService) {
-      $scope.transactions = DataService.getTransactionsByAccount(1);
-      $scope.shop = DataService.getShopsById(1);
 
-      console.log('TRANSACTIONS:', $scope.transactions);
-      console.log('SHOP:', $scope.shop);
+      var populateTransactions = function () {
+        return DataService.getTransactionsByAccount(1).$loaded().then(function (response) {
+          $scope.transactions = response;
+          angular.forEach($scope.transactions, function (transaction) {
+            transaction.shopData = DataService.getShopsById(transaction.shop);
+            console.log(transaction);
+          });
+        });
+      };
+
+      $onInit = function () {
+        populateTransactions();
+      }
+
+      $onInit();
     }
   ])
 
   .controller('settingsCtrl', ['$scope', '$stateParams', 'DataService',
     function ($scope, $stateParams, DataService) {
       $scope.shops = DataService.getShops();
+
+      $scope.changeAllowance = function (obj) {
+        var update = {};
+        update['shops/' + obj.$id + "/allowed"] = obj.allowed;
+        firebase.database().ref().update(update);
+      };
+
+      $scope.disableAccount = function () {
+
+      };
 
       console.log('SHOPS:', $scope.shops);
     }

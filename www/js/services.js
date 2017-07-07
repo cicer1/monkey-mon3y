@@ -35,5 +35,9 @@ angular.module('app.services', [])
 
         return $firebaseObject(ref);
       };
+
+      this.getEverything = function () {
+        return $firebaseObject(firebase.database().ref());
+      }
     }
   ]);
