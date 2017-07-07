@@ -16,55 +16,65 @@ $dark:                            #444 !default;
 */
 
 // The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
+$ionicons-font-path: '../lib/ionic/fonts' !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 @import "vars";
 @import "list";
 
+
 * {
   font-family: $font;
 }
 
-.login {
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font !important;
+}
 
+.login {
   .background.scroll-content {
-      background: url('../img/login.png') no-repeat;
-      background-size: cover;
+    background     : url('../img/login.png') no-repeat;
+    background-size: cover;
   }
 
   .login-key {
     background-color: transparent;
-    border: 0;
+    border          : 0;
+
     input {
       color: transparent;
     }
   }
+
   .container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    position       : absolute;
+    height         : 100%;
+    width          : 100%;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
+
     img {
-      width: 130px;
+      width : 130px;
       height: 130px;
       margin: 0 auto;
     }
+
     .four-key {
-      height: 80px;
-      display: flex;
+      height         : 80px;
+      display        : flex;
       justify-content: center;
-      margin-top: 10px;
+      margin-top     : 10px;
+
       .banana {
-        width: 80px;
-        height: 80px;
-        background: url('../img/pinEmpty.png') no-repeat;
+        width          : 80px;
+        height         : 80px;
+        background     : url('../img/pinEmpty.png') no-repeat;
         background-size: cover;
+
         &.selected {
-          background: url('../img/pinFull.png') no-repeat;
+          background     : url('../img/pinFull.png') no-repeat;
           background-size: cover;
         }
       }
@@ -78,53 +88,68 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .background.banana-clean {
-  background: url('../img/banana-clean.png') no-repeat;
+  background     : url('../img/banana-clean.png') no-repeat;
   background-size: cover;
 }
 
 .accounts {
-
   .background.scroll-content {
-    background: url('../img/overview.png') no-repeat;
+    background     : url('../img/overview.png') no-repeat;
     background-size: cover;
   }
 
   .accounts-mainusername {
-    padding-top: 120px;
-    text-align: center;
-    color: $jungle-brown;
-    font-size: 50px;
+    padding-top  : 120px;
+    text-align   : center;
+    color        : $jungle-brown;
+    font-size    : 60px;
     margin-bottom: 15px;
+    font-weight: 900;
   }
 
   .linked-account {
     text-align: center;
-    color: $jungle-brown;
-    font-size: 30px;
+    color     : $jungle-brown;
+    font-size : 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
   }
 
 }
 
-
-
 .accounts-list-item {
-  background: url('../img/card.png') no-repeat;
+  background         : url('../img/card.png') no-repeat;
   background-position: center top;
-  background-size: 100% auto;
-  height: 45vw;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 50%;
+  background-size    : 100% auto;
+  height             : 45vw;
+  margin-bottom      : 0;
+  display            : flex;
+  flex-direction     : column;
+  justify-content    : center;
+  padding-left       : 40%;
+
   .account-name {
-    color: $jungle-brown;
-    font-size: 40px;
-    margin-bottom: 40px;
+    color        : $jungle-brown;
+    font-size    : 34px;
+    font-weight  : 900;
+    margin-bottom: 0;
+    line-height  : 1.2em;
   }
+
   .account-balance {
-    color: $mouse-grey;
-    font-size: 30px;
-    font-size: 20px;
+    color      : $mouse-grey;
+    font-size  : 30px;
+    font-weight: 400;
   }
+}
+
+.separator-header {
+  background    : #eee;
+  border-bottom : 1px solid #ccc;
+  margin        : -1px -10px 0;
+  padding       : 10px 10px 7px;
+  text-transform: uppercase;
+  font-weight   : 400;
+  color         : #777;
+  font-size     : 12px;
 }

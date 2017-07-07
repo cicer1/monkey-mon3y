@@ -1,9 +1,9 @@
-<ion-view title="Settings" id="page8">
-  <ion-content padding="true" class="has-header">
+<ion-view title="Settings" id="page8" class="background banana-clean">
+  <ion-content padding="true" class="background has-header">
     <!-- Account -->
     <ul class="monkey-list">
-      <li>
-        <img src="" alt="">
+      <li class="monkey-list-item">
+        <img src="{{ account.icon }}" alt="">
         <div class="item-data">
           <div class="item-name" ng-bind="account.name"></div>
           <div class="item-text">Monkey Card</div>
@@ -13,10 +13,13 @@
     </ul>
 
     <!-- Shops -->
-    <h4 class="separator-header"></h4>
+    <h4 class="separator-header">
+      In your neighborhood
+    </h4>
+
     <ul class="monkey-list">
-      <li ng-repeat="shop in shops">
-        <img src="" alt="">
+      <li ng-repeat="shop in shops" class="monkey-list-item">
+        <img ng-src="{{ shop.icon }}" alt="">
         <div class="item-data">
           <div class="item-name">{{ shop.name }}</div>
           <div class="item-text">{{ shop.distance }}</div>
