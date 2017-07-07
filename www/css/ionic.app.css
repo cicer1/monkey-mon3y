@@ -9823,15 +9823,15 @@ a.button {
   border-bottom: 1px solid #FEC43B;
   margin: 0 -10px;
   padding: 20px;
-  min-height: 95px; }
+  min-height: 90px; }
   .monkey-list .monkey-list-item img {
     width: 15vw;
-    margin: 0 10px 0 -5px; }
+    margin: -5px 10px 0 -5px; }
   .monkey-list .monkey-list-item .item-data {
     flex: 1; }
   .monkey-list .monkey-list-item .item-name {
     font-size: 22px;
-    line-height: 1.3em;
+    line-height: 1.2em;
     font-weight: 900; }
   .monkey-list .monkey-list-item .item-text {
     font-size: 19px;
@@ -9910,12 +9910,14 @@ a.button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 50%; }
+  padding-left: 40%; }
   .accounts-list-item .account-name {
     color: #472406;
-    font-size: 40px;
-    margin-bottom: 40px; }
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    line-height: 1.2em; }
   .accounts-list-item .account-balance {
     color: #AAAAAA;
     font-size: 30px;
-    font-size: 20px; }
+    font-weight: 400; }

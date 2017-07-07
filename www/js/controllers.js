@@ -41,6 +41,7 @@ angular.module('app.controllers', [])
       };
 
       $onInit = function () {
+        $scope.account = DataService.getAccountsById($stateParams.accountId);
         populateTransactions();
       }
 

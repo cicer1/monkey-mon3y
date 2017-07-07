@@ -7,17 +7,17 @@
     border-bottom: 1px solid $banana-yellow;
     margin: 0 -10px;
     padding: 20px;
-    min-height: 95px;
+    min-height: 90px;
     img {
       width: 15vw;
-      margin: 0 10px 0 -5px;
+      margin: -5px 10px 0 -5px;
     }
     .item-data {
       flex: 1;
     }
     .item-name {
       font-size: 22px;
-      line-height: 1.3em;
+      line-height: 1.2em;
       font-weight: 900;
     }
     .item-text {
