@@ -73,29 +73,48 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .accounts {
+
   .background.scroll-content {
     background: url('../img/overview.png') no-repeat;
     background-size: cover;
   }
-  .accounts-list {
-    .accounts-list-item {
-      background: url('../img/card.png') no-repeat;
-      background-size: cover;
-      height: 45vh;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 50%;
-      .account-name {
-        color: $jungle-brown;
-        font-size: 22px;
-      }
-      .account-balance {
-        color: $banana-yellow;
-        font-size: 20px;
-      }
-    }
+
+  .accounts-mainusername {
+    padding-top: 120px;
+    text-align: center;
+    color: $jungle-brown;
+    font-size: 50px;
+    margin-bottom: 15px;
   }
 
+  .linked-account {
+    text-align: center;
+    color: $jungle-brown;
+    font-size: 30px;
+  }
+
+}
+
+
+
+.accounts-list-item {
+  background: url('../img/card.png') no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  height: 45vw;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50%;
+  .account-name {
+    color: $jungle-brown;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .account-balance {
+    color: $mouse-grey;
+    font-size: 30px;
+    font-size: 20px;
+  }
 }
