@@ -9851,6 +9851,9 @@ a.button {
 * {
   font-family: "Skia"; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Skia" !important; }
+
 .login .background.scroll-content {
   background: url("../img/login.png") no-repeat;
   background-size: cover; }
@@ -9901,20 +9904,23 @@ a.button {
   padding-top: 120px;
   text-align: center;
   color: #472406;
-  font-size: 50px;
-  margin-bottom: 15px; }
+  font-size: 60px;
+  margin-bottom: 15px;
+  font-weight: 900; }
 
 .accounts .linked-account {
   text-align: center;
   color: #472406;
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px; }
 
 .accounts-list-item {
   background: url("../img/card.png") no-repeat;
   background-position: center top;
   background-size: 100% auto;
   height: 45vw;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9923,7 +9929,7 @@ a.button {
     color: #472406;
     font-size: 34px;
     font-weight: 900;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     line-height: 1.2em; }
   .accounts-list-item .account-balance {
     color: #AAAAAA;
