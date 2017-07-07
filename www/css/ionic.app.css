@@ -9822,13 +9822,14 @@ a.button {
   background: white;
   border-bottom: 1px solid #FEC43B;
   margin: 0 -10px;
-  padding: 20px;
+  padding: 20px 15px;
   min-height: 90px; }
   .monkey-list .monkey-list-item img {
     width: 15vw;
     margin: -5px 10px 0 -5px; }
   .monkey-list .monkey-list-item .item-data {
-    flex: 1; }
+    flex: 1;
+    padding: 6px 0; }
   .monkey-list .monkey-list-item .item-name {
     font-size: 22px;
     line-height: 1.2em;
@@ -9845,7 +9846,7 @@ a.button {
     margin-top: 10px;
     font-weight: 700; }
   .monkey-list .monkey-list-item .item-toggle {
-    padding: 24px 31px;
+    padding: 24px 35px;
     border: 0; }
 
 * {
