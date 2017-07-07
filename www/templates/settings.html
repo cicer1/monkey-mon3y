@@ -5,8 +5,8 @@
       <li>
         <img src="" alt="">
         <div class="item-data">
-          <div class="item-name"></div>
-          <div class="item-text"></div>
+          <div class="item-name" ng-bind="account.name"></div>
+          <div class="item-text">Monkey Card</div>
         </div>
         <ion-toggle ng-model="account.enabled" ng-change="changeAccountStatus(1, account.enabled)"></ion-toggle>
       </li>
