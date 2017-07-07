@@ -9815,6 +9815,39 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.monkey-list .monkey-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: white;
+  border-bottom: 1px solid #FEC43B;
+  margin: 0 -10px;
+  padding: 20px;
+  min-height: 95px; }
+  .monkey-list .monkey-list-item img {
+    width: 15vw;
+    margin: 0 10px 0 -5px; }
+  .monkey-list .monkey-list-item .item-data {
+    flex: 1; }
+  .monkey-list .monkey-list-item .item-name {
+    font-size: 22px;
+    line-height: 1.3em;
+    font-weight: 900; }
+  .monkey-list .monkey-list-item .item-text {
+    font-size: 19px;
+    font-weight: 400; }
+  .monkey-list .monkey-list-item .item-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8c8c8c;
+    font-size: 28px;
+    margin-top: 10px;
+    font-weight: 700; }
+
+* {
+  font-family: "Skia"; }
+
 .login .background.scroll-content {
   background: url("../img/login.png") no-repeat;
   background-size: cover; }
@@ -9832,10 +9865,15 @@ a.button {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .login .container img {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto; }
   .login .container .four-key {
     height: 80px;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 10px; }
     .login .container .four-key .banana {
       width: 80px;
       height: 80px;
