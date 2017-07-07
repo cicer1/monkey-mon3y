@@ -9,12 +9,6 @@ angular.module('app.routes', [])
   $stateProvider
 
 
-      .state('splash', {
-    url: '/splash',
-    templateUrl: 'templates/splash.html',
-    controller: 'splashCtrl'
-  })
-
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
@@ -39,7 +33,7 @@ angular.module('app.routes', [])
     controller: 'settingsCtrl'
   })
 
-$urlRouterProvider.otherwise('/accounts')
+$urlRouterProvider.otherwise('/login')
 
 
 });
