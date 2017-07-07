@@ -6,7 +6,9 @@ angular.module('app.controllers', [])
     function ($scope, $stateParams, $location) {
 
       var PIN_LENGTH = 4;
-      $scope.loginKey = { value: 1 };
+      $scope.loginKey = {
+        value: 1
+      };
 
       $scope.loginKeyChanged = function () {
         console.log($scope.loginKey)
@@ -52,14 +54,24 @@ angular.module('app.controllers', [])
     function ($scope, $stateParams, DataService) {
       $scope.shops = DataService.getShops();
 
+      $scope.account = DataService.getAccountsById(1);
+
       $scope.changeAllowance = function (obj) {
         var update = {};
         update['shops/' + obj.$id + "/allowed"] = obj.allowed;
         firebase.database().ref().update(update);
       };
 
-      $scope.disableAccount = function () {
+      $scope.changeAccountStatus = function (accountId, bool) {
+        var len = $scope.shops.length;
+        var update = {};
 
+        update['accounts/' + accountId + '/enabled'] = bool;
+        for (var i = 1; i <= len; i++) {
+          update['shops/' + i + "/allowed"] = bool;
+        }
+
+        firebase.database().ref().update(update);
       };
 
       console.log('SHOPS:', $scope.shops);

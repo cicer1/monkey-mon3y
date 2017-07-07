@@ -8,7 +8,7 @@
           <div class="item-name"></div>
           <div class="item-text"></div>
         </div>
-        <ion-toggle></ion-toggle>
+        <ion-toggle ng-model="account.enabled" ng-change="changeAccountStatus(1, account.enabled)"></ion-toggle>
       </li>
     </ul>
 
