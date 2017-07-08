@@ -3,11 +3,9 @@
     <name>Monkey</name>
     <description>The best app in the jungle.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Banana Team</author>
-    <content original-src="index.html" src="http://10.10.19.63:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
-    <allow-navigation href="http://10.10.19.26:8101" />
-    <allow-navigation href="http://10.10.19.63:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
