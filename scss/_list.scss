@@ -6,7 +6,7 @@
     background     : white;
     border-bottom  : 1px solid $banana-yellow;
     margin         : 0 -10px;
-    padding        : 20px;
+    padding        : 20px 15px;
     min-height     : 90px;
 
     img {
@@ -16,6 +16,7 @@
 
     .item-data {
       flex: 1;
+      padding: 6px 0;
     }
 
     .item-name {
@@ -40,7 +41,7 @@
     }
 
     .item-toggle {
-      padding: 24px 31px;
+      padding: 24px 35px;
       border : 0;
     }
   }

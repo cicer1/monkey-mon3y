@@ -24,7 +24,7 @@
           <div class="item-name">{{ shop.name }}</div>
           <div class="item-text">{{ shop.distance }}</div>
         </div>
-        <ion-toggle ng-model="shop.allowed" ng-change="changeAllowance(shop)"></ion-toggle>
+        <ion-toggle ng-model="shop.allowed" ng-disabled="!account.enabled" ng-change="changeAllowance(shop)"></ion-toggle>
       </li>
     </ul>
   </ion-content>
