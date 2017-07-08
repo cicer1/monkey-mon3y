@@ -1,25 +1,28 @@
 <ion-view hide-nav-bar="true" id="page6" class="accounts">
-  <ion-content class="background" scroll="false">
 
-    <!-- Main user name -->
-    <header>
-      <h1 class="accounts-mainusername">Gilles</h1>
-    </header>
+  <ion-content class="background has-header" scroll="false">
 
-    <!-- Linked Account -->
-    <section class="linked-account">
-      <h3>NL91 RABO 0417 1643 00</h3>
-    </section>
+    <div class="accountswrapper">
+      <!-- Main user name -->
+      <header>
+        <h1 class="accounts-mainusername">Gilles</h1>
+      </header>
 
-    <!-- Accounts List -->
-    <ul class="accounts-list">
-      <li class="accounts-list-item" ng-repeat="account in accounts" ui-sref="transaction({accountId:account.$id})">
-            <div class="account-data">
-              <div class="account-name">{{ account.name }}</div>
-              <div class="account-balance">{{ account.balance }}€</div>
-            </div>
-        </li>
-    </ul>
+      <!-- Linked Account -->
+      <section class="linked-account">
+        <h3>NL91 RABO 0417 1643 00</h3>
+      </section>
+
+      <!-- Accounts List -->
+      <ul class="accounts-list">
+        <li class="accounts-list-item" ng-repeat="account in accounts" ui-sref="transaction({accountId:account.$id})">
+              <div class="account-data">
+                <div class="account-name">{{ account.name }}</div>
+                <div class="account-balance">{{ account.balance }}€</div>
+              </div>
+          </li>
+      </ul>
+    </div>
 
   </ion-content>
 </ion-view>

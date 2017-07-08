@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
 
-  .controller('loginCtrl', ['$scope', '$stateParams', '$ionicHistory', '$state',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+  .controller('loginCtrl', ['$scope', '$stateParams', '$ionicHistory', '$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
     // You can include any angular dependencies as parameters for this function
     // TIP: Access Route Parameters for your page via $stateParams.parameterName
     function ($scope, $stateParams, $ionicHistory, $state) {
@@ -16,7 +16,7 @@ angular.module('app.controllers', [])
           $scope.loginKey.value = 1;
 
           $ionicHistory.nextViewOptions({
-              disableBack: true
+            disableBack: true
           });
           $state.go('accounts');
 
@@ -47,9 +47,16 @@ angular.module('app.controllers', [])
         });
       };
 
+      var watcher = function () {
+        return DataService.getTransactionsByAccount(parseInt($scope.accountId)).$watch(function (newValue) {
+          populateTransactions();
+        });
+      };
+
       $onInit = function () {
         $scope.account = DataService.getAccountsById($stateParams.accountId);
         populateTransactions();
+        watcher();
       }
 
       $onInit();

@@ -9897,24 +9897,25 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/banana-clean.png") no-repeat;
   background-size: cover; }
 
-.accounts .background.scroll-content {
-  background: url("../img/overview.png") no-repeat;
-  background-size: cover; }
-
-.accounts .accounts-mainusername {
-  padding-top: 120px;
-  text-align: center;
-  color: #472406;
-  font-size: 60px;
-  margin-bottom: 15px;
-  font-weight: 900; }
-
-.accounts .linked-account {
-  text-align: center;
-  color: #472406;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 20px; }
+.accounts {
+  margin-top: -43px;
+  height: calc(100vh + 43px); }
+  .accounts .background.scroll-content {
+    background: url("../img/overview.png") no-repeat;
+    background-size: cover; }
+  .accounts .accounts-mainusername {
+    padding-top: 150px;
+    text-align: center;
+    color: #472406;
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: 900; }
+  .accounts .linked-account {
+    text-align: center;
+    color: #472406;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px; }
 
 .accounts-list-item {
   background: url("../img/card.png") no-repeat;

@@ -3,29 +3,27 @@
     <button class="button button-icon icon ion-android-settings" ui-sref="settings({accountId:accountId})"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="background has-header" scroll="true">
+      <ul class="accounts-list">
+          <li class="accounts-list-item">
+              <img src="" alt="">
+              <div class="account-data">
+                <span class="account-name">{{ account.name }}</span><br>
+                <span class="account-balance">{{ account.balance }}€</span>
+              </div>
+          </li>
+      </ul>
 
-    <ul class="accounts-list">
-        <li class="accounts-list-item">
-            <img src="" alt="">
-            <div class="account-data">
-              <span class="account-name">{{ account.name }}</span><br>
-              <span class="account-balance">{{ account.balance }}€</span>
-            </div>
+      <ul class="monkey-list">
+        <li class="monkey-list-item" ng-repeat="transaction in transactions">
+          <img ng-src="{{ transaction.shopData.icon }}" alt="">
+          <div class="item-data">
+            <span class="item-name">{{ transaction.shopData.name }}</span> <br>
+            <span class="item-text">{{ transaction.date }}</span>
+          </div>
+          <div class="item-amount">
+            -{{ transaction.amount }}€
+          </div>
         </li>
-    </ul>
-
-    <ul class="monkey-list">
-      <li class="monkey-list-item" ng-repeat="transaction in transactions">
-        <img ng-src="{{ transaction.shopData.icon }}" alt="">
-        <div class="item-data">
-          <span class="item-name">{{ transaction.shopData.name }}</span> <br>
-          <span class="item-text">{{ transaction.date }}</span>
-        </div>
-        <div class="item-amount">
-          -{{ transaction.amount }}€
-        </div>
-      </li>
-    </ul>
-
+      </ul>
   </ion-content>
 </ion-view>
